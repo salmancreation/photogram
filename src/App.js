@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Title from './comps/Title';
+import UploadForm from './comps/UploadForm';
+import PhotoGrid from './comps/PhotoGrid';
+import SimpleReactLightbox from "simple-react-lightbox";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <Title />
+                        <UploadForm />
+                        <SimpleReactLightbox>
+                            <PhotoGrid />
+                        </SimpleReactLightbox>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default App;
